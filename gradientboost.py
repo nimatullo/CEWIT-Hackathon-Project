@@ -17,18 +17,7 @@ y_train = df['award_share'].to_numpy()
 
 X_train, y_train = shuffle(X_train, y_train)
 
-forest = GradientBoostingRegressor()
+forest = GradientBoostingRegressor(n_estimators=200, random_state=0)
 forest.fit(X_train, y_train)
 
-prediction = forest.predict(current_players[features])
-formated_pred = {}
-
-index = 0
-for award_share in prediction:
-    formated_pred[award_share] = current_players['player'][index]
-    index = index + 1
-
-index = 1
-for player in sorted(formated_pred, reverse=True):
-    print(f'{index}. {formated_pred[player]}: {player}')
-    index = index + 1
+gradient_prediction = forest.predict(current_players[features])
