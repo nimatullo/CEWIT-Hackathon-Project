@@ -1,56 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='graph.css') }}"
-    />
-  </head>
-  <style>
-.container{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-</style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css" >
 
-  <body>
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<title>NBA MVP Prodictions</title>
+</head>
+<body>
+    <div class="container text-center center-block" style="text-align: center; position:inherit;">
+      <h1 class="center"style="text-align:center"> Data Techniques and Terminology</h1>
+      <div class="row" style="margin-left: 12%;">
+        <!--Todo: Fix Centering Later LOL-->
+        <div class="col-md-12 center" style="text-align: center;">
+          <div class="card mb-6 box-shadow" style="width: 768px;">
+            <img class="card-img-top" src="Figure1.png" alt="Correlation Data">
+            <div class="card-body">
+              <h4 class="card-header" style="text-align:center">Linear Regression Model</h4>
+              <p class="card-text" style="text-align:center">Using <b><i>Linear Regression</i></b> we can determine the <b>prediction</b> of the dependant variable which in our case is
+                the <b>Award Shares</b>. We trained this model using the data which we filtered with the <b><i>Correlation Matrix</i></b> and
+                we use those inputs as the various independant variables.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-12">
+          <div class="card mb-6 box-shadow" style="width: 768px;">
+            <img class="card-img-top" src="Figure2.png" alt="Heatmap Data" >
+            <div class="card-body">
+              <h4 class="card-header" style="text-align:center">Correlation Matrix</h4>
+              <p class="card-text" style="text-align:center">We used a <b><i>Correlation Matrix</i></b> to find the correlation 
+                between variables in order to determine which were most impactful to our <b>model and analysis</b>. 
+                Aside from the diagonal, Darker means <i>stronger</i> correlation, while lighter means <i>weaker</i>.</p>
+            </div>
+          </div>
+          
+        </div>
+        <div class="col-md-12">
+          <div class="card mb-6 box-shadow" style="width: 768px;">
+              <div class="card-body">
+              <h4 class="card-header" style="text-align:center">Important Terms</h4>
+              <table class="table table-bordered ">
+                <thead>
+                  <tr>
+                    <th scope="col">Abbreviated Term</th>
+                    <th scope="col">Full Term</th>
+                    <th scope="col">Definition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">fga</th>
+                    <td colspan="2">Field Goal Attempts</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">fg3a</th>
+                    <td colspan="2">3pt Field Goal Attempts</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">fta</th>
+                    <td colspan="2">Free Throw Attempts</td>
+                
+                  </tr>
+                  <tr>
+                    <th scope="row">per</th>
+                    <td>Player Efficiency Rating</td>
+                    <td>Averages Player's contributions to a number</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">ts_pct</th>
+                    <td>True Shooting Percentage</td>
+                    <td>Measures Player's efficiency at shooting</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">usg_pct</th>
+                    <td>Usage Percentage</td>
+                    <td>How often the Player was used</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">bpm</th>
+                    <td>Box Plus/Minus</td>
+                    <td>Box-Score based metric for evaluating quality and contributions</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">mp_per_g</th>
+                    <td colspan="2">Minutes Played Per Game</td>
+                
+                  </tr>
+                  <tr>
+                    <th scope="row">pts_per_g</th>
+                    <td colspan="2">Points Per Game</td>
+                
+                  </tr>
+                  <tr>
+                    <th scope="row">trb_per_g</th>
+                    <td colspan="2">Total Rebounds Per Game</td>
+                
+                  </tr>
+                  <tr>
+                    <th scope="row">ast_per_g</th>
+                    <td colspan="2">Assists Per Game</td>
+                
+                  </tr>
+                  <tr>
+                    <th scope="row">stl_per_g</th>
+                    <td colspan="2">Steals Per Game</td>
+                
+                  </tr>
+                  <tr>
+                    <th scope="row">blk_per_g</th>
+                    <td colspan="2">Blocks Per Game</td>
+                
+                  </tr>
+                  <tr>
+                    <th scope="row">fg_pct</th>
+                    <td colspan="2">Field Goal Percentage</td>
+                
+                  </tr>
+                  <tr>
+                    <th scope="row">fg3_pct</th>
+                    <td colspan="2">3 Point Field Goal Percentage</td>
+                
+                  </tr>
+                  <tr>
+                    <th scope="row">pt_pct</th>
+                    <td colspan="2">Point Percentage</td>
+                
+                  </tr>
+                  <tr>
+                    <th scope="row">ws</th>
+                    <td>Win Shares</td>
+                    <td>Visualizes how much success the Player brings to the team</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2" scope="row">Award Shares</th>
+                    <td>Illustrates the votability of the Player as MVP in the Hall of Fame</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">ws_per_48</th>
+                    <td colspan="2">Win Shares per 48 Minutes Ingame</td>
+                
+                  </tr>
+                  <tr>
+                    <th scope="row">win_pct</th>
+                    <td colspan="2">Win Percentage</td>
+                
+                  </tr>
+                </tbody>
+              </table>
 
-    <h1>Data visualization</h1>
-    <hr>
-  </hr>
-  <div class="container">
-     <div>
-    <img src="correlationmatrix.png" alt="Graph2" style="width:800px;height:550px;">
-      <h2>
-        Correlation matrix
-        <h3>
-          We used a correlation matrix to find the correlation between variables in order to determine
-          <br>
-           which
-          were useful to our analysis. 
-        </br>
-        </h3>
-      </h2>
-  </div>
-  
-  <div>
-    <img src="correleation2.png" alt="Graph1" style="width:800px;height:550px;">
-    <h2>
-      Linear Regression
-      <h3>
-        Using Linear Regression we can determine the PREDICTION of the dependant variable which in our case is 
-        the Award Shares. We trained the model using the data which we filtered with the correlation matrix and 
-        we use those inputs as the various independant variables.
-      </h3>
-  
-    </h2>
-  </div>
-</div>
-
+             </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  <!--<script src="holder.min.js"></script>-->
   </body>
 </html>
