@@ -7,8 +7,8 @@ import numpy as np
 features = ['pts_per_g', 'ast_per_g', 'trb_per_g', 'stl_per_g',
             'mp_per_g', 'blk_per_g', 'ws', 'ts_pct', 'win_pct']
 
-df = (pd.read_csv("../data/mvp_votings.csv"))
-current_players = pd.read_csv("../data/current_results.csv")
+df = (pd.read_csv("data/mvp_votings.csv"))
+current_players = pd.read_csv("data/current_results.csv")
 df = df[features + ['award_share']]
 
 

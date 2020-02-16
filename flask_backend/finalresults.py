@@ -6,7 +6,7 @@ from models.gradientboost import gradient_prediction
 import pandas as pd
 
 results_average = []
-current_players = pd.read_csv("../data/current_results.csv")
+current_players = pd.read_csv("data/current_results.csv")
 
 for i, prediction in enumerate(gradient_prediction):
     results_average.append(
