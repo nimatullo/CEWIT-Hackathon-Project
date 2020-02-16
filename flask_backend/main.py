@@ -1,4 +1,5 @@
 from finalresults import result
+from individual_dictionaries import RFR, GBR, LR
 from flask import Flask, render_template
 import sys
 app = Flask(__name__)
@@ -6,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return render_template('index.html', data=result)
+    return render_template('index.html', data=result, RFR=RFR, GBR=GBR, LR=LR)
 
 
 @app.route('/data_page')

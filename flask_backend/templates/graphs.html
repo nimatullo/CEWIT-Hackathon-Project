@@ -2,75 +2,121 @@
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="static/bootstrap.min.css" >
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="static/bootstrap.min.css" />
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<title>NBA MVP Prodictions</title>
-</head>
-<body>
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+      crossorigin="anonymous"
+    />
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <title>NBA MVP Prodictions</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#nav-content"
+        aria-controls="nav-content"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <!-- Brand -->
-    <a class="navbar-brand" href="/">ProdDict</a>
-    
-    <!-- Links -->
-    <div class="collapse navbar-collapse" id="nav-content">   
-    <ul class="navbar-nav">
-    <li class="nav-item">
-    <a class="nav-link" href="/">Home & Data</a>
-    </li>
-    <li class="nav-item">
-    <a class="nav-link active" href="#">Models & Terms<span class="sr-only">(current)</span></a>
-    </li>
-    </ul>
-    </div>
+      <!-- Brand -->
+      <a class="navbar-brand" href="/">ProdDict</a>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="nav-content">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home & Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#"
+              >Models & Terms<span class="sr-only">(current)</span></a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
 
-
-    <div class="container text-center center-block" style="text-align: center; position:inherit;">
-      <h1 class="center"style="text-align:center"> Data Techniques and Terminology</h1>
+    <div
+      class="container text-center center-block"
+      style="text-align: center; position:inherit;"
+    >
+      <h1 class="center" style="text-align:center">
+        Data Techniques and Terminology
+      </h1>
       <div class="row" style="margin-left: 12%;">
         <!--Todo: Fix Centering Later LOL-->
         <div class="col-md-12 center" style="text-align: center;">
           <div class="card mb-6 box-shadow" style="width: 768px;">
-            <img class="card-img-top" src="static/Figure1.png" alt="Correlation Data">
+            <img
+              class="card-img-top"
+              src="static/Figure1.png"
+              alt="Correlation Data"
+            />
             <div class="card-body">
-              <h4 class="card-header" style="text-align:center">Linear Regression Model</h4>
-              <p class="card-text" style="text-align:center">Using <b><i>Linear Regression</i></b> we can determine the <b>prediction</b> of the dependant variable which in our case is
-                the <b>Award Shares</b>. We trained this model using the data which we filtered with the <b><i>Correlation Matrix</i></b> and
-                we use those inputs as the various independant variables.</p>
+              <h4 class="card-header" style="text-align:center">
+                Linear Regression Model
+              </h4>
+              <p class="card-text" style="text-align:center">
+                Using <b><i>Linear Regression</i></b> we can determine the
+                <b>prediction</b> of the dependant variable which in our case is
+                the <b>Award Shares</b>. We trained this model using the data
+                which we filtered with the <b><i>Correlation Matrix</i></b> and
+                we use those inputs as the various independant variables.
+              </p>
             </div>
           </div>
         </div>
-        
+
         <div class="col-md-12">
           <div class="card mb-6 box-shadow" style="width: 768px;">
-            <img class="card-img-top" src="static/Figure2.png" alt="Heatmap Data" >
+            <img
+              class="card-img-top"
+              src="static/Figure2.png"
+              alt="Heatmap Data"
+            />
             <div class="card-body">
-              <h4 class="card-header" style="text-align:center">Correlation Matrix</h4>
-              <p class="card-text" style="text-align:center">We used a <b><i>Correlation Matrix</i></b> to find the positive relationship 
-                between variables in order to determine which were most impactful to our <b>model and analysis</b>. 
-                Aside from the diagonal, Darker means <i>stronger</i> correlation, while lighter means <i>weaker</i>.</p>
+              <h4 class="card-header" style="text-align:center">
+                Correlation Matrix
+              </h4>
+              <p class="card-text" style="text-align:center">
+                We used a <b><i>Correlation Matrix</i></b> to find the positive
+                relationship between variables in order to determine which were
+                most impactful to our <b>model and analysis</b>. Aside from the
+                diagonal, Darker means <i>stronger</i> correlation, while
+                lighter means <i>weaker</i>.
+              </p>
             </div>
           </div>
-          
         </div>
         <div class="col-md-12">
           <div class="card mb-6 box-shadow" style="width: 768px;">
-              <div class="card-body">
-              <h4 class="card-header" style="text-align:center">Important Terms</h4>
+            <div class="card-body">
+              <h4 class="card-header" style="text-align:center">
+                Important Terms
+              </h4>
               <table class="table table-bordered ">
                 <thead>
                   <tr>
@@ -91,101 +137,105 @@
                   <tr>
                     <th scope="row">fta</th>
                     <td colspan="2">Free Throw Attempts</td>
-                
                   </tr>
                   <tr>
                     <th scope="row">per</th>
                     <td>Player Efficiency Rating</td>
-                    <td>Averages Player's contributions to a number</td>
+                    <td>
+                      Sums up all a player's positive accomplishments, subtracts
+                      the negative accomplishments, and returns a per-minute
+                      rating of a player's performance.
+                    </td>
                   </tr>
                   <tr>
                     <th scope="row">ts_pct</th>
                     <td>True Shooting Percentage</td>
-                    <td>Measures Player's efficiency at shooting</td>
+                    <td>
+                      Measure of shooting efficiency that takes into account
+                      field goals, 3-point field goals, and free throws.
+                    </td>
                   </tr>
                   <tr>
                     <th scope="row">usg_pct</th>
                     <td>Usage Percentage</td>
-                    <td>How often the Player was used</td>
+                    <td>
+                      an estimate of the percentage of team plays used by a
+                      player while he was on the floor.
+                    </td>
                   </tr>
                   <tr>
                     <th scope="row">bpm</th>
                     <td>Box Plus/Minus</td>
-                    <td>Box-Score based metric for evaluating quality and contributions</td>
+                    <td>
+                      Box-Score based metric for evaluating quality and
+                      contributions
+                    </td>
                   </tr>
                   <tr>
                     <th scope="row">mp_per_g</th>
                     <td colspan="2">Minutes Played Per Game</td>
-                
                   </tr>
                   <tr>
                     <th scope="row">pts_per_g</th>
                     <td colspan="2">Points Per Game</td>
-                
                   </tr>
                   <tr>
                     <th scope="row">trb_per_g</th>
                     <td colspan="2">Total Rebounds Per Game</td>
-                
                   </tr>
                   <tr>
                     <th scope="row">ast_per_g</th>
                     <td colspan="2">Assists Per Game</td>
-                
                   </tr>
                   <tr>
                     <th scope="row">stl_per_g</th>
                     <td colspan="2">Steals Per Game</td>
-                
                   </tr>
                   <tr>
                     <th scope="row">blk_per_g</th>
                     <td colspan="2">Blocks Per Game</td>
-                
                   </tr>
                   <tr>
                     <th scope="row">fg_pct</th>
                     <td colspan="2">Field Goal Percentage</td>
-                
                   </tr>
                   <tr>
                     <th scope="row">fg3_pct</th>
                     <td colspan="2">3 Point Field Goal Percentage</td>
-                
                   </tr>
                   <tr>
-                    <th scope="row">pt_pct</th>
-                    <td colspan="2">Point Percentage</td>
-                
+                    <th scope="row">ft_pct</th>
+                    <td colspan="2">Free Throw Percentage</td>
                   </tr>
                   <tr>
                     <th scope="row">ws</th>
                     <td>Win Shares</td>
-                    <td>Visualizes how much success the Player brings to the team</td>
+                    <td>
+                      Visualizes how much success the Player brings to the team
+                    </td>
                   </tr>
                   <tr>
                     <th colspan="2" scope="row">Award Shares</th>
-                    <td>Illustrates the votability of the Player as MVP in the Hall of Fame</td>
+                    <td>
+                      Points won by the player divided by the maximum number of
+                      award points.
+                    </td>
                   </tr>
                   <tr>
                     <th scope="row">ws_per_48</th>
                     <td colspan="2">Win Shares per 48 Minutes Ingame</td>
-                
                   </tr>
                   <tr>
                     <th scope="row">win_pct</th>
                     <td colspan="2">Win Percentage</td>
-                
                   </tr>
                 </tbody>
               </table>
-
-             </div>
+            </div>
           </div>
-          
         </div>
       </div>
     </div>
-  <!--<script src="holder.min.js"></script>-->
+    <!--<script src="holder.min.js"></script>-->
   </body>
 </html>
