@@ -23,5 +23,4 @@ indices = numpy.argsort(regress.feature_importances_)[::-1]
 important_features = []
 
 for index in indices:
-    important_features.append(
-        {orig_features[index]: regress.feature_importances_[index]})
+    print(f"{orig_features[index]}: {regress.feature_importances_[index]}")

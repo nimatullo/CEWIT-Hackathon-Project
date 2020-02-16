@@ -106,11 +106,27 @@
             <a href="data_page"> Data Page & Terms</a>, you can see the result
             of a linear regression plot on the data.
           </h1>
+          <br />
+          <h3>2019-2020 Results</h1>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Award Share</th>
+              </tr>
+            </thead>
+            {% for x in data %}
+            <tr>
+              <td>{{x.name}}</td>
+              <td>{{x.award_share}}</td>
+            </tr>
+            {% endfor %}
+          </table>
         </div>
       </div>
     </div>
 
-    <div id="container">
+    <div class="container">
       <div class="row">
         <div style="background-color:#404040;" class="col-sm-4" id="left">
           <p class="lead">Gradient Boosting</p>

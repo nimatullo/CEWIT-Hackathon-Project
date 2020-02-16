@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return render_template('index.html', data=result, RFR=RFR, GBR=GBR, LR=LR)
+    return render_template('index.html', data=result[0:5], RFR=RFR, GBR=GBR, LR=LR)
 
 
 @app.route('/data_page')
