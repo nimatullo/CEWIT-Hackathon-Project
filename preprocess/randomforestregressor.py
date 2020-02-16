@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 import numpy
 
-df = pd.read_csv('mvp_votings.csv')
+df = pd.read_csv('../flask_backend/data/mvp_votings.csv')
 
 orig_features = ['fga', 'fg3a', 'fta', 'per', 'ts_pct', 'usg_pct', 'bpm',
                  'mp_per_g', 'pts_per_g', 'trb_per_g', 'ast_per_g',
@@ -20,5 +20,8 @@ regress.fit(X_train, y_data)
 
 indices = numpy.argsort(regress.feature_importances_)[::-1]
 
+important_features = []
+
 for index in indices:
-    print(f"{orig_features[index]}: {regress.feature_importances_[index]}")
+    important_features.append(
+        {orig_features[index]: regress.feature_importances_[index]})
