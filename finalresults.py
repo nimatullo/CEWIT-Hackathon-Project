@@ -1,12 +1,12 @@
 import statistics
-from randomforest import forest_prediction
-from linearreg import linear_regression_prediction
-from gradientboost import gradient_prediction
+from models.randomforest import forest_prediction
+from models.linearreg import linear_regression_prediction
+from models.gradientboost import gradient_prediction
 
 import pandas as pd
 
 results_average = []
-current_players = pd.read_csv("test_data.csv")
+current_players = pd.read_csv("../data/current_results.csv")
 
 for i, prediction in enumerate(gradient_prediction):
     results_average.append(
@@ -19,7 +19,8 @@ for award_share in results_average:
     formated_pred[award_share] = current_players['player'][index]
     index = index + 1
 
-index = 1
+index = 0
+result = []
 for player in sorted(formated_pred.keys(), reverse=True):
-    print(f'{index}. {formated_pred[player]}: {player}')
-    index = index + 1
+    data = {'name': formated_pred[player], 'award_share': player}
+    result.append(data)
