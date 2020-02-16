@@ -1,26 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}"
-    />
-  </head>
-  <body>
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Award Share</th>
-      </tr>
-      {% for x in data %}
-      <tr>
-        <td>{{x.name}}</td>
-        <td>{{x.award_share}}</td>
-      </tr>
-      {% endfor %}
-    </table>
-  </body>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="static/bootstrap.min.css" >
+    <link rel="stylesheet" href="style.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<title>NBA MVP Prodictions</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">ProdDict</a>
+    
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="nav-content">   
+    <ul class="navbar-nav">
+    <li class="nav-item">
+    <a class="nav-link active" href="#">Home & Data<span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="data_page">Models & Terms</a>
+    </li>
+    </ul>
+    </div>
+    </nav>
+
+
+  <div class="jumbotron" style="height: 900px;" id="top">
+    <div class="row">
+
+
+      <div class="col-md-3" id="left-label">
+        <p class="lead">Models Used</p>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Gradient Boosting</li>
+          <li class="list-group-item">Linear Regression</li>
+          <li class="list-group-item">Random Forest</li>
+        </ul>
+
+        <div style="height: 100px;">
+
+        </div>
+        
+        <p class="lead">Data Used</p>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Points per game</li>
+          <li class="list-group-item">Assits per game</li>
+          <li class="list-group-item">Rebounds per game</li>
+          <li class="list-group-item">Steals per game</li>
+          <li class="list-group-item">Minutes per game</li>
+          <li class="list-group-item">Blocks per game</li>
+          <li class="list-group-item">WinShare</li>
+          <li class="list-group-item">True Shooting</li>
+          <li class="list-group-item">Win Percentage</li>
+        </ul>
+      </div>
+
+      <div class="col-md-9 display-4" id="center-label">
+        NBA Mvp Predictions
+        <p class="lead">Sherzod, Alexis, Will, Mark </p>
+        <br>
+        <p class="small">
+          This project uses different machine learning models to predict the next NBA MVP based on previous winners and runner ups.
+          We obtain this information by utilizing and training a neural network with statistical data of previous winners.
+          Almost every feasible basketball stat was utilized and fed into a heatmap which assisted us in better understanding the corellations
+          between win share and other stats. Using 3 different models, we created  decently accurate model which does gives a decently
+          correct prediction, with Percentage of occurance. On page <a href="data_pag"> Data Page & Terms</a>, you can see the result
+          of a linear regression plot on the data.
+        </p>
+      </div>
+
+      
+
+    </div>
+
+  </div>
+
+
+  <div id="container">
+    <div class="row">
+    <div class="col-sm-4" id="left">
+      <p class="lead">Gradient Boosting</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Award Share</th>
+          </tr>
+        </thead>
+        {% for x in data %}
+        <tr>
+          <td>{{x.name}}</td>
+          <td>{{x.award_share}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+
+    <div class="col-sm-4" id="Center">
+      <p class="lead">Linear Regression</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Award Share</th>
+          </tr>
+        </thead>
+        {% for x in data %}
+        <tr>
+          <td>{{x.name}}</td>
+          <td>{{x.award_share}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+
+    <div class="col-sm-4" id="Right">
+      <p class="lead">Random Forest</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Award Share</th>
+          </tr>
+        </thead>
+        {% for x in data %}
+        <tr>
+          <td>{{x.name}}</td>
+          <td>{{x.award_share}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+  </div>
+</body>
+
 </html>
