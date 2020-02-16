@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='graph.css') }}"
+    />
+  </head>
+  <style>
+.container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+</style>
+
+
+  <body>
+
+    <h1>Data visualization</h1>
+    <hr>
+  </hr>
+  <div class="container">
+     <div>
+    <img src="correlationmatrix.png" alt="Graph2" style="width:800px;height:550px;">
+      <h2>
+        Correlation matrix
+        <h3>
+          We used a correlation matrix to find the correlation between variables in order to determine
+          <br>
+           which
+          were useful to our analysis. 
+        </br>
+        </h3>
+      </h2>
+  </div>
+  
+  <div>
+    <img src="correleation2.png" alt="Graph1" style="width:800px;height:550px;">
+    <h2>
+      Linear Regression
+      <h3>
+        Using Linear Regression we can determine the PREDICTION of the dependant variable which in our case is 
+        the Award Shares. We trained the model using the data which we filtered with the correlation matrix and 
+        we use those inputs as the various independant variables.
+      </h3>
+  
+    </h2>
+  </div>
+</div>
+
+  </body>
+</html>
